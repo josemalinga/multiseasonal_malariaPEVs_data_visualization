@@ -15,7 +15,7 @@ library(ggpubr)
 ### Visualizes tradeoffs and reduction for hybrid vaccination with and without drug
 ##########################################################################################
 
-data_set <- readRDS(paste0(getwd(),"/data_FigEa.rds"))
+data_set <- read.csv(paste0(getwd(),"/data_FigEa.csv"))
 
 data_set = data_set[data_set$Coverage==0.9 &
                       data_set$prev_cat=="10-20" &
