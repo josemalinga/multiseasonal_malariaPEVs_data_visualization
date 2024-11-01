@@ -52,8 +52,8 @@ a = ggplot(data=vaccine_decay) +
         legend.position = c(0.225,0.2))
 
 # Seasonal profiles used
-seasonality = read.table(paste0("~/S1 Text_FigB/Seasonality_BF_Mali.txt"), sep="\t", header = TRUE)
-seasonality = gather(seasonality, mos, value, Jan:Dec, factor_key=TRUE)
+seasonality = read.table(paste0(getwd(),"/Seasonality_BF_Mali.txt"), sep="\t", header = TRUE)
+seasonality = tidyr::gather(seasonality, mos, value, Jan:Dec, factor_key=TRUE)
 seasonality$Country = recode_factor(seasonality$Seasonality,
                                     "BF" = "Burkina Faso", "Mali" = "Mali")
 
